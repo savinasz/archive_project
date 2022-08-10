@@ -5,14 +5,9 @@ import 'package:archive_project/ui/theme/archive_primary_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DocumentArchiveScreen extends StatefulWidget{
+class DocumentArchiveScreen extends StatelessWidget{
   const DocumentArchiveScreen({Key? key}) : super(key: key);
 
-  @override
-  _DocumentArchiveScreen createState() => _DocumentArchiveScreen();
-}
-
-class _DocumentArchiveScreen extends State<DocumentArchiveScreen>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +55,7 @@ class _DocumentArchiveScreen extends State<DocumentArchiveScreen>{
         body: SafeArea(
           child: SingleChildScrollView(
               child: Column(
-                children: [
+                children: const [
                   BuildFolderDocument(),
                   BuildFolderDocument(),
                   BuildFolderDocument(),

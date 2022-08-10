@@ -1,6 +1,5 @@
 import 'package:archive_project/ui/component/button/archive_generic_button.dart';
 import 'package:archive_project/ui/theme/archive_primary_theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DocumentDetail extends StatefulWidget{
@@ -28,7 +27,7 @@ class _DocumentDetail extends State<DocumentDetail> {
   Widget _buildDetailDocument(){
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(dimen24),
+        padding: const EdgeInsets.all(dimen24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -36,7 +35,7 @@ class _DocumentDetail extends State<DocumentDetail> {
           children: [
             Text('Arsip 1 Tahun 2020', style: ArchiveTheme.title),
             Padding(
-              padding: EdgeInsets.only(top: dimen16),
+              padding: const EdgeInsets.only(top: dimen16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -66,7 +65,7 @@ class _DocumentDetail extends State<DocumentDetail> {
               style: ArchiveTheme.primaryTextStyle,
               textAlign: TextAlign.justify,),
             Padding(
-                padding: EdgeInsets.only(top: dimen32),
+                padding: const EdgeInsets.only(top: dimen32),
                 child: ArchivePrimaryButton(context: context, text: "Unduh", isEnabled: true, onPressed: (){}))
           ],
         ),

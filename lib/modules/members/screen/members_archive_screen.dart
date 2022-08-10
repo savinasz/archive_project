@@ -4,14 +4,9 @@ import 'package:archive_project/ui/theme/archive_primary_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MembersArchiveScreen extends StatefulWidget{
+class MembersArchiveScreen extends StatelessWidget{
   const MembersArchiveScreen({Key? key}) : super(key: key);
 
-  @override
-  _MembersArchiveScreen createState() => _MembersArchiveScreen();
-}
-
-class _MembersArchiveScreen extends State<MembersArchiveScreen>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +71,7 @@ class _MembersArchiveScreen extends State<MembersArchiveScreen>{
 
 
   Widget _buildFolderMembers() {
-    return Container(
+    return SizedBox(
       width: 450,
       child: Card(
         elevation: 1,

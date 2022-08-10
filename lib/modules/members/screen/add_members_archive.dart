@@ -18,6 +18,15 @@ class _AddMembersScreen extends State <AddMembersScreen> {
   final TextEditingController _verificationPasswordController = TextEditingController();
 
   @override
+  void dispose(){
+    _nameController.dispose();
+    _phoneController.dispose();
+    _passwordController.dispose();
+    _verificationPasswordController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

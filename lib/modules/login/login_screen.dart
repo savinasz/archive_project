@@ -10,12 +10,20 @@ class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  _LoginScreen createState() => _LoginScreen();
+  _LoginScreenState createState() => _LoginScreenState();
+
 }
 
-class _LoginScreen extends State<LoginScreen>{
+class _LoginScreenState extends State<LoginScreen>{
   final TextEditingController _nikController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void dispose(){
+    _nikController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +36,7 @@ class _LoginScreen extends State<LoginScreen>{
               Center(
                 child: Column(
                   children: [
-                    Padding(padding: EdgeInsets.symmetric(horizontal: dimen16, vertical: dimen32),
+                    Padding(padding: const EdgeInsets.symmetric(horizontal: dimen16, vertical: dimen32),
                         child: Image.asset('assets/hospital.png', height: 120)),
                     Text('Silahkan login terlebih dahulu',
                         style: ArchiveTheme.subTitle.copyWith(fontSize: 18)),

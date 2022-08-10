@@ -18,6 +18,13 @@ class _AddDocumentScreen extends State <AddDocumentScreen> {
   final TextEditingController _otherController = TextEditingController();
 
   @override
+  void dispose(){
+    _descController.dispose();
+    _otherController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -42,14 +49,14 @@ class _AddDocumentScreen extends State <AddDocumentScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                    padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                     child: Text(
                         'Tambah Dokumen',
                         style: ArchiveTheme.title.copyWith(fontSize: 24)
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                    padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                     child: Text(
                         'Isi beberapa data dibawah',
                         style: ArchiveTheme.primaryTextStyle
@@ -64,7 +71,7 @@ class _AddDocumentScreen extends State <AddDocumentScreen> {
                   ArchiveGenericTextInput(
                       controller: _otherController,
                       inputType: TextInputType.text),
-                  ArchiveGenericTextInputHint(text: 'Unggah Dokumen'),
+                  const ArchiveGenericTextInputHint(text: 'Unggah Dokumen'),
                   _buildFilePlaceHolder(),
                   const SizedBox(height: 60),
                   ArchivePrimaryButton(
@@ -84,7 +91,7 @@ class _AddDocumentScreen extends State <AddDocumentScreen> {
     return InkWell(
       onTap: (){},
       child: Padding(
-        padding: EdgeInsets.only(left: dimen16, top: dimen8),
+        padding: const EdgeInsets.only(left: dimen16, top: dimen8),
         child: DottedBorder(
           borderType: BorderType.RRect,
           strokeWidth: 1,

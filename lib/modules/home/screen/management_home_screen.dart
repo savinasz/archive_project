@@ -1,16 +1,10 @@
 import 'package:archive_project/modules/home/widgets/build_management_home_menu.dart';
 import 'package:archive_project/ui/theme/archive_primary_theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ManagementHomeScreen extends StatefulWidget{
+class ManagementHomeScreen extends StatelessWidget{
   const ManagementHomeScreen({Key? key}) : super(key: key);
 
-  @override
-  _ManagementHomeScreen createState() => _ManagementHomeScreen();
-}
-
-class _ManagementHomeScreen extends State<ManagementHomeScreen>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(

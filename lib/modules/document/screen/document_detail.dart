@@ -2,14 +2,9 @@ import 'package:archive_project/ui/component/button/archive_generic_button.dart'
 import 'package:archive_project/ui/theme/archive_primary_theme.dart';
 import 'package:flutter/material.dart';
 
-class DocumentDetail extends StatefulWidget{
+class DocumentDetail extends StatelessWidget{
   const DocumentDetail({Key? key}) : super(key: key);
 
-  @override
-  _DocumentDetail createState() => _DocumentDetail();
-}
-
-class _DocumentDetail extends State<DocumentDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +61,7 @@ class _DocumentDetail extends State<DocumentDetail> {
               textAlign: TextAlign.justify,),
             Padding(
                 padding: const EdgeInsets.only(top: dimen32),
-                child: ArchivePrimaryButton(context: context, text: "Unduh", isEnabled: true, onPressed: (){}))
+                child: ArchivePrimaryButton(text: "Unduh", isEnabled: true, onPressed: (){}))
           ],
         ),
       ),

@@ -2,7 +2,7 @@ import 'package:archive_project/ui/theme/archive_primary_theme.dart';
 import 'package:flutter/material.dart';
 
 Widget ArchivePrimaryButton({
-  required BuildContext context,
+  BuildContext? context,
   required String text,
   required bool isEnabled,
   double? height,

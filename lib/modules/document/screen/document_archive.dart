@@ -38,7 +38,7 @@ class DocumentArchiveScreen extends StatelessWidget{
                   Navigator.push(
                     context,
                     CupertinoPageRoute(
-                        builder: (context) => const AddDocumentScreen()),
+                        builder: (context) => AddDocumentScreen()),
                   );
                 },
                 child: const Icon(

@@ -4,26 +4,19 @@ import 'package:archive_project/ui/component/text/archive_generic_input_hint.dar
 import 'package:archive_project/ui/theme/archive_primary_theme.dart';
 import 'package:flutter/material.dart';
 
-class AddMembersScreen extends StatefulWidget{
-  const AddMembersScreen({Key? key}) : super(key: key);
+class AddMembersScreen extends StatelessWidget{
+  AddMembersScreen({Key? key}) : super(key: key);
 
-  @override
-  _AddMembersScreen createState() =>  _AddMembersScreen();
-}
-
-class _AddMembersScreen extends State <AddMembersScreen> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _verificationPasswordController = TextEditingController();
 
-  @override
   void dispose(){
     _nameController.dispose();
     _phoneController.dispose();
     _passwordController.dispose();
     _verificationPasswordController.dispose();
-    super.dispose();
   }
 
   @override

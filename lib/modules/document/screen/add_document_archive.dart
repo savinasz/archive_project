@@ -3,25 +3,17 @@ import 'package:archive_project/ui/component/input/archive_generic_input.dart';
 import 'package:archive_project/ui/component/text/archive_generic_input_hint.dart';
 import 'package:archive_project/ui/theme/archive_primary_theme.dart';
 import 'package:dotted_border/dotted_border.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AddDocumentScreen extends StatefulWidget{
-  const AddDocumentScreen({Key? key}) : super(key: key);
+class AddDocumentScreen extends StatelessWidget{
+  AddDocumentScreen({Key? key}) : super(key: key);
 
-  @override
-  _AddDocumentScreen createState() =>  _AddDocumentScreen();
-}
-
-class _AddDocumentScreen extends State <AddDocumentScreen> {
   final TextEditingController _descController = TextEditingController();
   final TextEditingController _otherController = TextEditingController();
 
-  @override
   void dispose(){
     _descController.dispose();
     _otherController.dispose();
-    super.dispose();
   }
 
   @override

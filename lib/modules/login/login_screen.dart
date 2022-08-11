@@ -6,23 +6,15 @@ import 'package:archive_project/ui/theme/archive_primary_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
-
-  @override
-  _LoginScreenState createState() => _LoginScreenState();
-
-}
-
-class _LoginScreenState extends State<LoginScreen>{
+class LoginScreen extends StatelessWidget {
   final TextEditingController _nikController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  @override
+  LoginScreen({Key? key}) : super(key: key);
+
   void dispose(){
     _nikController.dispose();
     _passwordController.dispose();
-    super.dispose();
   }
 
   @override

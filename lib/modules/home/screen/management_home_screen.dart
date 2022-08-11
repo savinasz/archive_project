@@ -18,7 +18,7 @@ class ManagementHomeScreen extends StatelessWidget{
                   children: [
                     Flexible(
                       child: Text(
-                        'Selamat Datang, Faruk Abdurohman',
+                        'Selamat Datang, Savina Zahro',
                         style: ArchiveTheme.title,
                       ),
                     ),

@@ -47,7 +47,7 @@ class BuildManagementHomeMenu extends StatelessWidget {
         required BuildContext context}) {
     return GestureDetector(
       onTap: onTap,
-      child: SizedBox(
+      child: Container(
         width: 170,
         child: Card(
           shape: RoundedRectangleBorder(

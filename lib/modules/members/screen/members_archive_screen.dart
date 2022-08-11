@@ -37,7 +37,7 @@ class MembersArchiveScreen extends StatelessWidget{
                   Navigator.push(
                     context,
                     CupertinoPageRoute(
-                        builder: (context) => const AddMembersScreen()),
+                        builder: (context) => AddMembersScreen()),
                   );
                 },
                 child: const Icon(

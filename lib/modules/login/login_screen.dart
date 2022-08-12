@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 150,),
+              const SizedBox(height: 100,),
               const ArchiveGenericTextInputHint(text: 'NIK'),
               ArchiveGenericTextInput(
                   controller: _nikController,
@@ -45,6 +45,12 @@ class LoginScreen extends StatelessWidget {
               ArchiveGenericTextInput(
                   controller: _passwordController,
                   inputType: TextInputType.visiblePassword
+              ),
+              Row(
+                children: [
+                  const CheckboxButton(),
+                  Text('Remember Password', style: ArchiveTheme.subTitle),
+                ],
               ),
               ArchivePrimaryButton(
                   context: context,
@@ -56,12 +62,35 @@ class LoginScreen extends StatelessWidget {
                       CupertinoPageRoute(
                           builder: (context) => const ManagementHomeScreen()),
                     );
-                  })
+                  }),
             ],
           ),
         ),
       ),
     );
   }
+}
 
+class CheckboxButton extends StatefulWidget {
+  const CheckboxButton({Key? key}) : super(key: key);
+
+  @override
+  _CheckboxButtonState createState() => _CheckboxButtonState();
+}
+
+class _CheckboxButtonState extends State<CheckboxButton> {
+  bool ischecked = false;
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: Icon(
+          ischecked ?Icons.check_box : Icons.check_box_outline_blank),
+      color: Colors.green,
+      onPressed: () {
+        setState(() {
+          ischecked = !ischecked;
+        });
+      },
+    );
+  }
 }

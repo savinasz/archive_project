@@ -47,33 +47,35 @@ class BuildManagementHomeMenu extends StatelessWidget {
         required BuildContext context}) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        width: 170,
-        child: Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          elevation: 4,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 22.0, horizontal: 12),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(
-                    icon,
-                    size: 60,
-                    color: ArchiveTheme.primaryColor
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
-                Flexible(
-                    child: Text(
-                      text,
-                      style: ArchiveTheme.subTitle,
-                      textAlign: TextAlign.center,)
-                )
-              ],
+      child: Flexible(
+        child: Container(
+          width: 170,
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            elevation: 4,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 22.0, horizontal: 12),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                      icon,
+                      size: 60,
+                      color: ArchiveTheme.primaryColor
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Flexible(
+                      child: Text(
+                        text,
+                        style: ArchiveTheme.subTitle,
+                        textAlign: TextAlign.center,)
+                  )
+                ],
+              ),
             ),
           ),
         ),

@@ -48,8 +48,8 @@ class BuildManagementHomeMenu extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Flexible(
-        child: Container(
-          width: 170,
+        child: SizedBox(
+          width: 150,
           child: Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
